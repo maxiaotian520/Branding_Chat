@@ -56,10 +56,6 @@ def generate_branding_snippet(prompt:str) -> str:
     response = openai.Completion.create(model="text-curie-001", prompt=enriched_prompt, temperature=0, max_tokens=32) # davinci-instruct-beta-v3
     # 调取gpt给出的结果 变量名后加冒号“:” var: type = value  这是 Python 3.5 中引入的 Type Annotation，是一种注解，用来提示变量的类型
     branding_text: str = response["choices"][0]["text"]
-    # 去掉空白
-    branding_text = branding_text.strip()
-    # 给被截断的句子后面加"..."省略号
-    last_char = branding_text[-1]
     # 因为上面设置了gpt 返回的最大长度是32 (max_tokens=32), 所以为了防止放回的句子被切断，所以如果判断被切断了，需要在后面加入省略号，否则句子是病句。
     if last_char not in {".", "!", "?"}:
         branding_text += "..."
