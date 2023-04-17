@@ -3,5 +3,6 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/app" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/copykitt-infra/cdk.out/asset.1dfd35ca6a7b581e0c71a616bf45d8fcf46df9e6ae2e001807c60d75ff72c22f" vcs="Git" />
   </component>
 </project>
