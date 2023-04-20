@@ -7,7 +7,7 @@ import logo from "../public/copykittLogo.svg";
 const CopyKitt: React.FC = () => {
   const CHARACTER_LIMIT: number = 32;
   const ENDPOINT: string =
-    "https://fdgb1jgo7k.execute-api.us-east-1.amazonaws.com/prod/generate_snippet_and_keywords";
+    "https://s75jwy4uzl.execute-api.us-east-1.amazonaws.com/prod/generate_snippet_and_keywords";
   // 保存表单出入的信息
   const [prompt, setPrompt] = React.useState("");
   const [snippet, setSnippet] = React.useState("");
@@ -66,7 +66,7 @@ const CopyKitt: React.FC = () => {
 
   const gradientTextStyle =
     "text-white text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-blue-500 font-light w-fit mx-auto";
-
+  //配置tailw
   return (
     <div className="h-screen flex">
       <div className="max-w-md m-auto p-2">

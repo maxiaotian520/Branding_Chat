@@ -23,8 +23,8 @@ export class CopykittInfraStack extends cdk.Stack {
       handler: "copykitt_api.handler",
       layers: [layer],
       environment: {
-        // 调取OPENAI_API_KEY 从env环境中
-        OPENAI_API_KEY: process.env.OPENAI_API_KEY ?? "", // 设置空字符串防止OPENAI_API_KEY调取失败
+        // 调取OPENAI_API_KEY 从env环境中, 设置空字符串防止OPENAI_API_KEY调取失败
+        OPENAI_API_KEY: process.env.OPENAI_API_KEY ?? "",
       }
     });
     // 创建gateway api 对象
